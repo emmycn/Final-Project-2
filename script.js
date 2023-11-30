@@ -66,7 +66,7 @@ dresses = [
   },
 ]
 
-// Function to append a product to the HTML
+/* // Function to append a product to the HTML
 function appendProductToHTML(product) {
   const container = document.getElementById("products-container");
 

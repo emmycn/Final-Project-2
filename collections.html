@@ -7,8 +7,66 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="products-container">
+    <div id="dressDetails">
+
     </div>
     <script src="script.js"></script>
+    <script>
+        const dloc = window.location.href;
+        const dsplt = dloc.split("?");
+        const sanitize = dsplt[1].split("=");
+        const dressCode = sanitize[1];
+
+        const selectedDress = dresses.find(dress => dress.code === dressCode);
+
+        const collectionDiv1= document.createElement("div");
+        const collectionDiv2= document.createElement("div");
+
+        if (selectedDress) {
+
+            let sizesOptions = '';
+            for (let i = 0; i < selectedDress.sizes.length; i++) {
+            sizesOptions += `<option value="${selectedDress.sizes[i]}">${selectedDress.sizes[i]}</option>`;
+        }
+
+        dressDetails.innerHTML = `
+            <img class="product-img" src="${selectedDress.image}" alt="${selectedDress.dress_name}">
+            <h3>${selectedDress.dress_name}</h3>
+            <p>${selectedDress.description}</p>
+            <p>Price: $${selectedDress.price}</p>
+            <select id="sizeDropdown">
+            <option disabled selected>Select Size</option>${sizesOptions}</select>
+            <button class="add-to-cart-btn" onclick="addToCart('${selectedDress.dress_code}')">Add to Cart</button>
+        `;
+            document.getElementById("dressDetails").innerHTML = dressDetailsHTML;
+        } else {
+            document.getElementById("dressDetails").innerHTML = "Dress not found.";
+        }
+
+            function addToCart(dressCode) {
+            // Add your logic for adding the item to the cart
+            alert(`Added ${dressCode} to the cart!`);
+        }
+
+        const sizeSelect = document.getElementById('size-select');
+        function updateSizeDropdown() {
+            const selectedIndex = dressSelect.value;
+            const selectedDress = dresses[selectedIndex];
+
+            // Clear existing size options
+            sizeSelect.innerHTML = '';
+
+        // Populate size dropdown with options from the selected dress
+        selectedDress.sizes.forEach(size => {
+            const option = document.createElement('option');
+            option.value = size;
+            option.text = size;
+            sizeSelect.add(option);
+  });
+}
+
+// Initial update of size dropdown based on the default selected dress
+updateSizeDropdown();
+    </script>
 </body>
 </html>
