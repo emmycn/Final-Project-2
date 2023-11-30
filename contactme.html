@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in touch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact-us-container">
+        <div>
+            <h2>Get in touch with us</h2>
+            <p>You can book an appointment with us. Fill out the form and we'll get back to you as soon as we can.</p>
+            <p>Follow us</p>
+            <img>
+        </div>
+        <div>
+            <form action="process_contact_form.php" method="post">
+                <!-- Your form fields go here -->
+                <label for="name">First Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="name">Last Name</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Mobile Phone</label>
+                <input type="number" id="phone" name="phone" required>
+
+                <label for="enquiry">Type of Enquiry</label>
+                <input type="text" id="enquiry" name="enquiry" required>
+
+                <label for="message">Message</label>
+                <input type="text" id="message" name="message" required>
+
+                <!-- Other form fields go here -->
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
