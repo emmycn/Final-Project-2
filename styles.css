@@ -187,27 +187,45 @@ body {
 }
 
 /*collections styles*/
-.product-img {
-    width: 50%;
-    height: 50%;
-    border: 2px solid #ddd; /* Add a border for better visibility */
-    border-radius: 8px; /* Add some border-radius for a rounded look */
-    margin-bottom: 10px; /* Add margin for spacing */
-    margin-top: 20px; /* Add margin for spacing */
+
+#dressDetails {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imgDress, #detailsDress {
+    width: 48%;
+}
+
+#imgDress img {
+    width: 100%;
+    height: auto;
 }
 
 .dress-name {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
 }
 
 .add-to-cart-btn {
-    background-color: #4caf50;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px 15px;
-    border: none;
+    border: 1px solid black; 
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 5%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#dressDetails p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.description {
+    color: gray;
 }
 
 /*collections1 styles*/
@@ -233,6 +251,20 @@ body {
     cursor: pointer;
 }
 
+.overlay-button p {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 18px;
+}
+
+.overlay-button a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
 .hidden-paragraphs {
     display: none;
     margin-top: 20px;
@@ -247,6 +279,33 @@ body {
 }
 
 .overlay-button a:hover {
-    color: black;
+    color: grey;
     text-decoration: underline;
 }
+
+.collection1-imgcontainer {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.collection1-imgcaption {
+    position: absolute;
+    bottom: 35%;
+    font-family: 'Ephesis', cursive;
+    font-size: 44px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin: 0;
+    transform: translateY(50%);
+    text-align: left;
+}
+
+.collection1-imgcontainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
