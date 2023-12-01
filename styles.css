@@ -5,7 +5,7 @@ body {
 }
 
 .burger-container {
-    display: none; /* Initially hide on larger screens */
+    display: none; 
     cursor: pointer;
 }
 
@@ -291,16 +291,15 @@ body {
 
 .collection1-imgcaption {
     position: absolute;
-    bottom: 35%;
-    font-family: 'Ephesis', cursive;
+    bottom: 70%;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 44px;
     width: 100%;
     text-align: center;
     color: black;
-    padding: 10px;
     margin: 0;
     transform: translateY(50%);
-    text-align: left;
+    text-align: center;
 }
 
 .collection1-imgcontainer img {
@@ -308,4 +307,56 @@ body {
     height: auto;
     display: block;
 }
+
+/*contactus styles*/
+
+.contact-us-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.contactusdiv1, .contactusdiv2 {
+    width: 48%;
+}
+
+iframe {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  label {
+    margin-bottom: 8px;
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 0px;
+    color: black;
+    cursor: pointer;
+  }
+
+  input:hover {
+    background-color: none;
+  }
 
