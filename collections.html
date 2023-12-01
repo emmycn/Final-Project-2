@@ -4,11 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="products-container">
+    <div class="burger-container" onclick="toggleNav()">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-row" id="navbarburger">
+            <div class="navbar-section" id="navbar-start">
+                <a href="index.html">Home</a>
+                <a href="collections1.html">Collections</a>
+                <a href="#journal">The Journal</a>
+            </div>
+            <div class="navbar-section">
+                <img src="images/IMG_8164.jpg" alt="Your Image">
+            </div>
+            <div class="navbar-section" id="navbar-end">
+                <a href="ourstory.html">Our Story</a>
+                <a href="#services">Our services</a>
+                <a href="contactme.html">Get in touch</a>
+            </div>
+        </div>
+    </nav>
+    <div id="dressDetails">
+        <div id="imgDress"></div>
+        <div id="detailsDress"></div>
     </div>
     <script src="script.js"></script>
+    <script>
+        const dloc = window.location.href;
+        const dsplt = dloc.split("?");
+        const sanitize = dsplt[1].split("=");
+        const dressCode = sanitize[1];
+
+        const selectedDress = dresses.find(dress => dress.code === dressCode);
+
+        if (selectedDress) {
+
+            let sizesOptions = '';
+            for (let i = 0; i < selectedDress.sizes.length; i++) {
+            sizesOptions += `<option value="${selectedDress.sizes[i]}">${selectedDress.sizes[i]}</option>`;
+        }
+
+        imgDress.innerHTML = `
+            <img class="product-img" src="${selectedDress.image}" alt="${selectedDress.dress_name}">
+        `;
+        detailsDress.innerHTML = `
+            <h3 class="dress-name">${selectedDress.dress_name}</h3>
+            <p class="description">${selectedDress.description}</p>
+            <p>Price: $${selectedDress.price}</p>
+            <select id="sizeDropdown">
+            <option disabled selected class="sizeOption">Select Size</option>${sizesOptions}</select>
+            <div>
+                <button class="add-to-cart-btn" onclick="addToCart('${selectedDress.dress_code}')">Add to Cart</button>
+            </div>
+            
+        `;
+            document.getElementById("imgDress").innerHTML = imgDressHTML;
+        } else {
+            document.getElementById("imgDress").innerHTML = "Dress not found.";
+        }
+
+
+        function addToCart(dressCode) {
+            alert(`Added ${selectedDress.dress_name} to the cart!`);
+        }
+
+        const sizeSelect = document.getElementById('size-select');
+        function updateSizeDropdown() {
+            const selectedIndex = dressSelect.value;
+            const selectedDress = dresses[selectedIndex];
+
+            // Clear existing size options
+            sizeSelect.innerHTML = '';
+
+        // Populate size dropdown with options from the selected dress
+        selectedDress.sizes.forEach(size => {
+            const option = document.createElement('option');
+            option.value = size;
+            option.text = size;
+            sizeSelect.add(option);
+        });
+        }
+
+// Initial update of size dropdown based on the default selected dress
+updateSizeDropdown();
+    </script>
 </body>
 </html>
