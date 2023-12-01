@@ -51,23 +51,29 @@ body {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1300px) {
     .burger-container {
-        display: block; /* Show on smaller screens */
+        display: block; 
+        top: 40px;
+        bottom: 20px;
+        margin-left: 15px;
     }
 
     .navbar {
-        display: none; /* Hide on smaller screens initially */
+        display: none; 
         flex-direction: column;
+        text-align: center;
+        grid-row-gap: 25px;
+        transition: 0.3s;
         text-align: center;
     }
 
-    .navbar a {
-        margin: 10px 0;
+    .navbar.active {
+        display: block; 
     }
 
     .change .burger:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
     }
 
     .change .burger:nth-child(2) {
@@ -75,7 +81,7 @@ body {
     }
 
     .change .burger:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-6px, -6px);
     }
 }
 
@@ -161,21 +167,6 @@ body {
 .page3 img {
     width: 50%;
     height: auto;
-}
-
-.theJournal {
-    margin-top:60px;
-    margin-bottom:60px;
-}
-
-.journalName {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
-}
-
-.journalPhotocredit {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
 }
 
 /*contactme styles*/
@@ -360,3 +351,35 @@ form {
     background-color: none;
   }
 
+/*thejournal styles*/
+
+.theJournal h1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 45px;
+    margin-left: 5%;
+
+}
+
+.theJournal {
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+.journalName {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 40px;
+}
+
+.journalPhotocredit {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.journal-place {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 30px;
+}
+
+.logo {
+    max-width: 100%;
+}
