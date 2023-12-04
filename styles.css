@@ -42,14 +42,6 @@ body {
     font-family: 'Cormorant SC', serif;
 }
 
-/* #navbar-start {
-    margin-right: 15%;
-}
-
-#navbar-end {
-    margin-left: 15%;
-}
- */
 .navbar-sectionlogo {
     display: flex;
     font-family: 'Cormorant SC', serif;   
@@ -284,7 +276,7 @@ body {
 .theJournal-header1st a{        
     text-align: left;
     font-family: 'Tenor Sans', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -328,6 +320,7 @@ body {
 .dress-name {
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
+    margin-bottom: 0%;
 }
 
 .add-to-cart-btn {
@@ -342,12 +335,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#dressDetails p {
-    font-family: 'Raleway', sans-serif;
-}
-
 .description {
     color: gray;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 20px;
+    margin-top: 5%;
 }
 
 /*collections1 styles*/
@@ -442,6 +434,16 @@ body {
 .contactusdiv1, .contactusdiv2 {
     width: 48%;
 }
+.contactusdiv1 h2 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 36px;
+}
+
+.contactusdiv1 p {
+    font-family: 'Cormorant Infant', serif;
+    color: grey;
+    font-size: 20px;
+}
 
 iframe {
     width: 100%;
@@ -484,13 +486,6 @@ form {
 
 /*thejournal styles*/
 
-.theJournal h1 {
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 45px;
-    margin-left: 5%;
-
-}
-
 .theJournal {
     margin-top:60px;
     margin-bottom:60px;
@@ -502,13 +497,122 @@ form {
 }
 
 .journalPhotocredit {
-    font-family: sans-serif;
+    font-family: 'Cormorant SC', serif;
     font-size: 16px;
+    color: grey;
 }
 
 .journal-place {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 30px;
+}
+
+.thejournal-imgcontainer {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.thejournal-imgcaption {
+    position: absolute;
+    bottom: 60%;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0;
+    transform: translateY(50%);
+    text-align: center;
+}
+
+.thejournal-imgcontainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-theJournal-content p {
+    margin: 5%;
+}
+
+.journal-description {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 18px;
+    color: grey;
+}
+
+/*ourstory styles*/
+.page2 h2 {
+    font-family: 'Tenor Sans', sans-serif;
+    color: black;
+}
+
+.ourstory-imgcontainer {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ourstory-imgcaption {
+    position: absolute;
+    bottom: 70%;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    transform: translateY(50%);
+    text-align: center;
+}
+
+.ourstory-imgcontainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*our services styles*/
+
+.ourservices-imgcontainer {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ourservices-imgcaption {
+    position: absolute;
+    bottom: 87%;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    transform: translateY(50%);
+    text-align: center;
+}
+
+.ourservices-imgcontainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ourservices-contentcontainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.ourservices-contentcontainer div:first-child {
+    flex: 1; 
+    padding: 10px;
+    text-align: center;
+}
+
+.ourservices-contentcontainer div {
+    flex: 1;
+    padding: 10px; 
 }
 
 .logo {
