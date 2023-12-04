@@ -4,6 +4,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .burger-container {
     display: none; 
     cursor: pointer;
@@ -25,19 +31,41 @@ body {
     background-color: white(51, 51, 51, 0.7); 
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
+    display: flex;
+    height: 60px; 
+    justify-content: space-around;
+    align-items: center;
 }
 
 .navbar-section {
-    flex: 1; 
-    text-align: center;
-    font-size: 13px;
+    font-size: 14px;
+    font-family: 'Cormorant SC', serif;
 }
 
-.navbar-row {
+/* #navbar-start {
+    margin-right: 15%;
+}
+
+#navbar-end {
+    margin-left: 15%;
+}
+ */
+.navbar-sectionlogo {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 60px; 
+    font-family: 'Cormorant SC', serif;   
+}
+
+.by-sectionlogo {
+    text-transform: lowercase;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 20px;
+    margin-top: 48px;
+}
+
+.name-sectionlogo {
+    display: flex;
+    font-size: 35px;
+    font-family: 'Cormorant SC', serif;   
 }
 
 .navbar a {
@@ -51,7 +79,7 @@ body {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 768px) {
     .burger-container {
         display: block; 
         top: 40px;
@@ -60,17 +88,45 @@ body {
     }
 
     .navbar {
-        display: none; 
+        position: absolute;
+        left: -100%;
+        top: 2rem;
         flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
         text-align: center;
-        grid-row-gap: 25px;
         transition: 0.3s;
-        text-align: center;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        grid-row-gap: 25px;
+        padding: 0;
+        height: auto;
+        z-index: 1;
+    }
+
+    #navbar-logo {
+        display: none;
+    }
+
+    .navbar-section {
+        display: flex;
+        flex-direction: column;
     }
 
     .navbar.active {
-        display: block; 
+        left: 0;
+        padding: 14px 22px;
     }
+
+    .navbar-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-body {
+        justify-content: center;
+      }
 
     .change .burger:nth-child(1) {
         transform: rotate(-45deg) translate(-6px, 6px);
@@ -93,28 +149,29 @@ body {
 
 .image-caption {
     position: absolute;
-    bottom: 35%;
+    bottom: 28%;
     font-family: 'Ephesis', cursive;
     font-size: 44px;
     width: 100%;
     text-align: center;
     color: black;
     padding: 10px;
-    margin: 0;
+    margin-left: 10%;
     transform: translateY(50%);
     text-align: left;
 }
 
 .image-caption2 {
     position: absolute;
-    bottom: 30%;
-    font-family: 'Open Sans', sans-serif;
+    bottom: 28%;
+    font-family: 'Tenor Sans', sans-serif;
     font-size: 18px;
     width: 100%;
     text-align: center;
     color: rgb(56, 53, 53);
     padding: 10px;
     margin: 0;
+    margin-left: 12%;
     transform: translateY(50%); 
     text-align: left;
 }
@@ -150,23 +207,97 @@ body {
 
 .page2 {
     margin-top:60px;
-    margin-bottom:60px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cormorant Infant', serif;
     color: grey;
     margin-left:80px;
     margin-right:80px;
     text-align: center;
+    font-size: 18px;
 }
 
-.page3 {
+.view-collection {
+    margin-top:0px;
+    margin-bottom:40px;
+    text-align: center;
+    margin-left:80px;
+    margin-right:80px;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.view-collection a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.view-collection a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/*the journal main page syles*/
+
+.main-theJournal-content {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
-.page3 img {
-    width: 50%;
+.main-theJournal-content div:first-child {
+    flex: 2; 
+    padding: 10px;
+}
+
+.main-theJournal-content div {
+    flex: 1;
+    padding: 10px; 
+}
+
+.main-theJournal-content img {
+    width: 100%;
     height: auto;
+    display: block;
+}
+
+.main-theJournal-header {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.main-theJournal-header div{
+    flex: 1;
+    padding: 20px; 
+    color: grey;
+}
+
+.theJournal-header1st p{
+    text-align: left;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 50px;
+    color: black;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.theJournal-header1st a{        
+    text-align: left;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.theJournal-header1st a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.thejournal-caption {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 20px;
 }
 
 /*contactme styles*/
@@ -235,7 +366,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     color: black;
     border: none;
     border-radius: 5px;
@@ -243,7 +374,7 @@ body {
 }
 
 .overlay-button p {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Tenor Sans', sans-serif;
     font-size: 18px;
 }
 
@@ -283,8 +414,8 @@ body {
 .collection1-imgcaption {
     position: absolute;
     bottom: 70%;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 44px;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
     width: 100%;
     text-align: center;
     color: black;

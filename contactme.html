@@ -14,64 +14,66 @@
         <div class="burger"></div>
     </div>
     <nav class="navbar">
-        <div class="navbar-row" id="navbarburger">
-            <div class="navbar-section" id="navbar-start">
-                <a href="index.html">Home</a>
-                <a href="collections1.html">Collections</a>
-                <a href="thejournal.html">The Journal</a>
-            </div>
-            <div class="navbar-section">
-                <img src="images/IMG_8164.jpg" alt="Your Image">
-            </div>
-            <div class="navbar-section" id="navbar-end">
-                <a href="ourstory.html">Our Story</a>
-                <a href="#services">Our services</a>
-                <a href="contactme.html">Get in touch</a>
-            </div>
+        <div class="navbar-section" id="navbar-start">
+            <a href="index.html">Home</a>
+            <a href="collections1.html">Collections</a>
+            <a href="thejournal.html">The Journal</a>
+        </div>
+        <div class="navbar-sectionlogo" id="navbar-logo">
+            <p class="by-sectionlogo">by</p>
+            <p class="name-sectionlogo">Anastasiia</p>
+        </div>
+        <div class="navbar-section" id="navbar-end">
+            <a href="ourstory.html">Our Story</a>
+            <a href="#services">Our services</a>
+            <a href="contactme.html">Get in touch</a>
         </div>
     </nav>
-    <div class="contact-us-container">
-        <div class="contactusdiv1">
-            <h2>Get in touch with us</h2>
-            <p>You can book an appointment with us. Fill out the form and we'll get back to you as soon as we can.</p>
-            <p>Follow us</p>
-            <img>
-            <h1>My Map</h1>
-            <iframe
-                width="600"
-                height="450"
-                frameborder="0"
-                style="border:0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.879520529566!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xYOUR_LATITUDE:0xYOUR_LONGITUDE!2sYOUR_LOCATION!5e0!3m2!1sen!2sus!4vYOUR_EMBED_CODE"
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="contactusdiv1">
-            <form action="process_contact_form.php" method="post">
-                <!-- Your form fields go here -->
-                <label for="name">First Name</label>
-                <input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+    <div class="main-body">
+        <div class="contact-us-container">
+            <div class="contactusdiv1">
+                <h2>Get in touch with us</h2>
+                <p>You can book an appointment with us. Fill out the form and we'll get back to you as soon as we can.</p>
+                <p>Follow us</p>
+                <img>
+                <h1>My Map</h1>
+                <iframe
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border:0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.879520529566!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xYOUR_LATITUDE:0xYOUR_LONGITUDE!2sYOUR_LOCATION!5e0!3m2!1sen!2sus!4vYOUR_EMBED_CODE"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="contactusdiv1">
+                <form action="process_contact_form.php" method="post">
+                    <!-- Your form fields go here -->
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
 
-                <label for="name">Last Name</label>
-                <input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
-        
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                    <label for="name">Last Name</label>
+                    <input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+            
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
 
-                <label for="phone">Mobile Phone</label>
-                <input type="number" id="phone" name="phone" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                    <label for="phone">Mobile Phone</label>
+                    <input type="number" id="phone" name="phone" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
 
-                <label for="enquiry">Type of Enquiry</label>
-                <input type="text" id="enquiry" name="enquiry" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                    <label for="enquiry">Type of Enquiry</label>
+                    <input type="text" id="enquiry" name="enquiry" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
 
-                <label for="message">Message</label>
-                <input type="text" id="message" name="message" style="border: none; border-bottom: 1px solid black; margin-left: 8px;">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" name="message" style="border: none; border-bottom: 1px solid black; margin-left: 8px;">
 
-                <!-- Other form fields go here -->
+                    <!-- Other form fields go here -->
 
-                <input type="submit" value="Submit">
-            </form>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
