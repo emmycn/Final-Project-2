@@ -131,6 +131,31 @@ body {
     .change .burger:nth-child(3) {
         transform: rotate(45deg) translate(-6px, -6px);
     }
+
+    .image-container {
+        text-align: center;
+    }
+
+    .page2, .collage-container, .main-theJournal-container {
+        margin-top: 10px;
+    }
+
+    .collage-item {
+        width: 100%;
+    }
+
+    .contactusdiv1 {
+        display: none; 
+    }
+
+    .contactus-body {
+        width: 100%;
+    }
+
+    .contactusdiv2 {
+        width: 100%; 
+    }
+
 }
 
 .image-container {
@@ -342,6 +367,41 @@ body {
     margin-top: 5%;
 }
 
+.backbutton {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.backbutton a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.backbutton a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+}
+  
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+  
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+  
+
 /*collections1 styles*/
 .collection1-container {
     position: relative;
@@ -421,8 +481,16 @@ body {
     height: auto;
     display: block;
 }
+ 
 
 /*contactus styles*/
+
+.contactus-body {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
 
 .contact-us-container {
     display: flex;
@@ -431,9 +499,6 @@ body {
     margin-top: 5%;
 }
 
-.contactusdiv1, .contactusdiv2 {
-    width: 48%;
-}
 .contactusdiv1 h2 {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 36px;
@@ -450,26 +515,24 @@ iframe {
 }
 
 form {
-    width: 100%;
-    height: auto;
-}
-
-form {
     background-color: #fff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
     width: 100%;
+    padding: 5%;
+    height: 100%;
   }
 
-  label {
+label {
     margin-bottom: 8px;
     margin-top: 5%;
     margin-left: 2%;
+    color: grey;
+    font-family: 'Tenor Sans', sans-serif;
   }
 
-  input {
+input {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
@@ -480,10 +543,56 @@ form {
     cursor: pointer;
   }
 
-  input:hover {
+input:hover {
     background-color: none;
   }
 
+.mymap {
+    font-family: 'Tenor Sans', sans-serif;
+  }
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    width: 100%;
+  }
+
+.inputbox {
+    font-family: 'Tenor Sans', sans-serif;
+    border: none; 
+    border-bottom: 1px solid black; 
+    margin-left: 8px;
+  }
+
+input[type="submit"] {
+    background-color: transparent;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Tenor Sans', sans-serif;
+    margin-top: 5%;
+  }
+
+input[type="submit"]:hover {
+    background-color: black;
+    color: white;
+}
+    
+.contactusdiv1 {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+
+.contactusdiv2 {
+    width: 48%;
+    float: right;
+    margin-left: 2%;
+}
+    
 /*thejournal styles*/
 
 .theJournal {
@@ -556,12 +665,12 @@ form {
 
 .ourstory-imgcaption {
     position: absolute;
-    bottom: 70%;
+    bottom: 75%;
     font-family: 'Cormorant Infant', serif;
     font-size: 60px;
     width: 100%;
     text-align: center;
-    color: black;
+    color: white;
     transform: translateY(50%);
     text-align: center;
 }

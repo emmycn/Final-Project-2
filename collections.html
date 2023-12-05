@@ -6,7 +6,7 @@
     <title>Collections</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,87 +33,83 @@
         <div class="burger"></div>
         <div class="burger"></div>
     </div>
-    <div class="main-body">
-        <nav class="navbar">
-            <div class="navbar-section" id="navbar-start">
-                <a href="index.html">Home</a>
-                <a href="collections1.html">Collections</a>
-                <a href="thejournal.html">The Journal</a>
-            </div>
-            <div class="navbar-sectionlogo" id="navbar-logo">
-                <p class="by-sectionlogo">by</p>
-                <p class="name-sectionlogo">Anastasiia</p>
-            </div>
-            <div class="navbar-section" id="navbar-end">
-                <a href="ourstory.html">Our Story</a>
-                <a href="ourservices.html">Our services</a>
-                <a href="contactme.html">Get in touch</a>
-            </div>
-        </nav>
-        <div id="dressDetails">
-            <div id="imgDress"></div>
-            <div id="detailsDress"></div>
+    <nav class="navbar">
+        <div class="navbar-section" id="navbar-start">
+            <a href="index.html">Home</a>
+            <a href="collections.html">Collections</a>
+            <a href="thejournal.html">The Journal</a>
         </div>
-        <script src="script.js"></script>
-        <script>
-            const dloc = window.location.href;
-            const dsplt = dloc.split("?");
-            const sanitize = dsplt[1].split("=");
-            const dressCode = sanitize[1];
-
-            const selectedDress = dresses.find(dress => dress.code === dressCode);
-
-            if (selectedDress) {
-
-                let sizesOptions = '';
-                for (let i = 0; i < selectedDress.sizes.length; i++) {
-                sizesOptions += `<option value="${selectedDress.sizes[i]}">${selectedDress.sizes[i]}</option>`;
-            }
-
-            imgDress.innerHTML = `
-                <img class="product-img" src="${selectedDress.image}" alt="${selectedDress.dress_name}">
-            `;
-            detailsDress.innerHTML = `
-                <h3 class="dress-name">${selectedDress.dress_name}</h3>
-                <p class="description">${selectedDress.description}</p>
-                <p>Price: $${selectedDress.price}</p>
-                <select id="sizeDropdown">
-                <option disabled selected class="sizeOption">Select Size</option>${sizesOptions}</select>
-                <div>
-                    <button class="add-to-cart-btn" onclick="addToCart('${selectedDress.dress_code}')">Add to Cart</button>
+        <div class="navbar-sectionlogo" id="navbar-logo">
+            <p class="by-sectionlogo">by</p>
+            <p class="name-sectionlogo">Anastasiia</p>
+        </div>
+        <div class="navbar-section" id="navbar-end">
+            <a href="ourstory.html">Our Story</a>
+            <a href="ourservices.html">Our services</a>
+            <a href="contactme.html">Get in touch</a>
+        </div>
+    </nav>
+    <div class="main-body">
+        <div class="collection1-imgcontainer">
+            <img src="images/IMG_8377.jpg" alt="Your collection">
+            <p class="collection1-imgcaption">Collections</p>
+            <div class="page2">
+                <p>Discover the perfect blend of modern and timeless elegance in our bridal wear collection. Each design is meticulously crafted to capture breathtaking beauty that transcends trends. Explore our collection now and find the dream dress for your perfect day.</p>
+            </div>
+        </div>
+        <div>
+            <div class="collection1-container">
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic1.jpg" alt="Image 1">
+                    <button class="overlay-button">
+                        <p>Aden Gown</p>
+                        <a href= "productdetails.html?code=D01">Learn more</a></button>
                 </div>
-                
-            `;
-                document.getElementById("imgDress").innerHTML = imgDressHTML;
-            } else {
-                document.getElementById("imgDress").innerHTML = "Dress not found.";
-            }
-
-
-            function addToCart(dressCode) {
-                alert(`Added ${selectedDress.dress_name} to the cart!`);
-            }
-
-            const sizeSelect = document.getElementById('size-select');
-            function updateSizeDropdown() {
-                const selectedIndex = dressSelect.value;
-                const selectedDress = dresses[selectedIndex];
-
-                // Clear existing size options
-                sizeSelect.innerHTML = '';
-
-            // Populate size dropdown with options from the selected dress
-            selectedDress.sizes.forEach(size => {
-                const option = document.createElement('option');
-                option.value = size;
-                option.text = size;
-                sizeSelect.add(option);
-            });
-            }
-
-    // Initial update of size dropdown based on the default selected dress
-    updateSizeDropdown();
-        </script>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic2.jpg" alt="Image 2">
+                    <button class="overlay-button">
+                        <p>Emma Gown</p>
+                        <a href= "productdetails.html?code=D02">Learn more</a></button>
+                </div>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic3.jpg" alt="Image 3">
+                    <button class="overlay-button">
+                        <p>Lily Gown</p>
+                        <a href= "productdetails.html?code=D03">Learn more</a></button>
+                </div>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic4.jpg" alt="Image 4">
+                    <button class="overlay-button">
+                        <p>Grace Gown</p>
+                        <a href= "productdetails.html?code=D04">Learn more</a></button>
+                </div>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic5.jpg" alt="Image 5">
+                    <button class="overlay-button">
+                        <p>Anastasiia Gown</p>
+                        <a href= "productdetails.html?code=D05">Learn more</a></button>
+                </div>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic6.jpg" alt="Image 6">
+                    <button class="overlay-button">
+                        <p>Hazel Gown</p>
+                        <a href= "productdetails.html?code=D06">Learn more</a></button>
+                </div>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic7.jpg" alt="Image 7">
+                    <button class="overlay-button">
+                        <p>Issa Gown</p>
+                        <a href= "productdetails.html?code=D07">Learn more</a></button>
+                </div>
+                <div class="img1-container">
+                    <img class="collage-item" src="images/2nd page/pic8.jpg" alt="Image 8">
+                    <button class="overlay-button">
+                        <p>Sophie Gown</p>
+                        <a href= "productdetails.html?code=D08">Learn more</a></button>
+                </div>   
+            </div>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -34,7 +34,7 @@
     <nav class="navbar">
         <div class="navbar-section" id="navbar-start">
             <a href="index.html">Home</a>
-            <a href="collections1.html">Collections</a>
+            <a href="collections.html">Collections</a>
             <a href="thejournal.html">The Journal</a>
         </div>
         <div class="navbar-sectionlogo" id="navbar-logo">
@@ -47,50 +47,67 @@
             <a href="contactme.html">Get in touch</a>
         </div>
     </nav>
-    <div class="main-body">
+    <div class="contactus-body">
         <div class="contact-us-container">
             <div class="contactusdiv1">
                 <h2>Get in touch with us!</h2>
                 <p>You can book an appointment with us. Fill out the form and we'll get back to you as soon as we can.</p>
                 <img>
-                <h1>My Map</h1>
+                <h1 class="mymap"> Find Us Here</h1>
                 <iframe
                     width="600"
                     height="450"
                     frameborder="0"
                     style="border:0"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.879520529566!2dYOUR_LONGITUDE!3dYOUR_LATITUDE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xYOUR_LATITUDE:0xYOUR_LONGITUDE!2sYOUR_LOCATION!5e0!3m2!1sen!2sus!4vYOUR_EMBED_CODE"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18000.658542600653!2d12.565221598065436!3d55.67016868259505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533f9185fc51%3A0xcbefe21a8442660!2sAdapt!5e0!3m2!1sda!2sdk!4v1701774489038!5m2!1sda!2sdk"></iframe>
                     allowfullscreen>
                 </iframe>
             </div>
-            <div class="contactusdiv1">
-                <form action="process_contact_form.php" method="post">
-                    <!-- Your form fields go here -->
-                    <label for="name">First Name</label>
-                    <input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+            <div class="contactusdiv2">
+                <form onsubmit="handleSubmit()">
+                    <div class="form-container">
+                        <div class="firstname-container">
+                            <label for="name">First Name</label>
+                            <input type="text" class="inputbox" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                        </div>
+                        <div class="lastname-container">
+                            <label for="name">Last Name</label>
+                            <input type="text" class="inputbox" name="name" required>
+                        </div>
+                    </div>
 
-                    <label for="name">Last Name</label>
-                    <input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
-            
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                    <input type="email" class="inputbox"  name="email"  required>
 
                     <label for="phone">Mobile Phone</label>
-                    <input type="number" id="phone" name="phone" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                    <input type="phone" class="inputbox"  name="phone"  required>
 
                     <label for="enquiry">Type of Enquiry</label>
-                    <input type="text" id="enquiry" name="enquiry" style="border: none; border-bottom: 1px solid black; margin-left: 8px;" required>
+                    <input type="text" class="inputbox" name="enquiry"  required>
 
                     <label for="message">Message</label>
-                    <input type="text" id="message" name="message" style="border: none; border-bottom: 1px solid black; margin-left: 8px;">
+                    <input type="text" class="inputbox"  name="message">
 
-                    <!-- Other form fields go here -->
+                    <label for="selectOption">How did you hear about us?</label>
+                    <select class="selectOption" name="selectOption" >
+
+                        <option value="">Select an option</option>
+
+                        <option value="option1">Social Media</option>
+                        <option value="option2">Google</option>
+                        <option value="option3">Referral</option>
+                        <option value="option4">Other</option>
+                    </select>
 
                     <input type="submit" value="Submit">
                 </form>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function handleSubmit() {
+            alert ("Form submitted!")
+        }
+    </script>
 </body>
 </html>
