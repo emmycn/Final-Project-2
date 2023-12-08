@@ -91,7 +91,6 @@ body {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         width: 100%;
-        grid-row-gap: 25px;
         padding: 0;
         height: auto;
         z-index: 1;
